@@ -1,0 +1,106 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: #ccc;
+}
+
+h1 {
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+  gap: 8rem;
+}
+
+.inputDiv {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.avatarsCardContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  width: 90%;
+  gap: 3rem;
+}
+
+.card {
+  background-color: cadetblue;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 10px;
+  opacity: 0.9;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  font-size: 2rem;
+}
+
+.card img {
+  width: 290px;
+  border-radius: 10px;
+}
+
+button {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: 1px solid #999;
+}
+
+input {
+  height: 100%;
+  border: 1px solid #111;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  text-align: center;
+}
+
+@media (max-width: 360px) {
+  .avatarsCardContainer {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  .card img {
+    width: 220px;
+  }
+}
+
+/*? ------ spinner ------- */
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid rgb(92, 154, 156);
+  border-color: rgb(95, 166, 168) transparent rgb(112, 211, 214) transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
